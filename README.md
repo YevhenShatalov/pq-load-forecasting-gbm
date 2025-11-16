@@ -1,5 +1,6 @@
 # pq-load-forecasting-gbm
 Code and experiments for probabilistic P/Q load forecasting with gradient boosting models (LightGBM, XGBoost, CatBoost, etc.). Includes leakage-safe lag construction, hyperparameter tuning, walk-forward evaluation, and Diebold–Mariano model comparison.
+
 The dataset is derived from measurements at a **110/10 kV substation located in Kyiv oblast (Ukraine)**, aggregated to hourly active (P) and reactive (Q) power.
 ## Overview
 
