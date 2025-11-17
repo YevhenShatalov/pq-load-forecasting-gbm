@@ -35,7 +35,7 @@ pq-load-forecasting-gbm/
     QD_2021History_GMT2.xlsx      # Raw reactive power demand (Q) for 2021
     QD_2022History_GMT2.xlsx      # Raw reactive power demand (Q) for 2022
     Sunrise_sunset.xlsx           # Sunrise/sunset and daylight-related information
-    PD_Weather_GMT2.xlsx # Weather data aligned to GMT+2 (or dummy structure)
+    PD_Weather_GMT2.xlsx          # Weather data aligned to GMT+2 (or dummy structure)
     PQ.xlsx                         # Merged and processed P/Q dataset used by the pipeline
     splits.xlsx                     # Predefined train/validation/test split dates
     README_data.md                  # Notes on how to obtain or reconstruct the data
