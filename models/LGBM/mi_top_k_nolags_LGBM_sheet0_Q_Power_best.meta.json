@@ -1,0 +1,51 @@
+{
+  "target": "Q_Power",
+  "model": "LGBM",
+  "best_params": {
+    "boosting_type": "gbdt",
+    "class_weight": null,
+    "colsample_bytree": 0.6792328642721364,
+    "importance_type": "split",
+    "learning_rate": 0.0752317574354701,
+    "max_depth": 12,
+    "min_child_samples": 233,
+    "min_child_weight": 0.001,
+    "min_split_gain": 0.0,
+    "n_estimators": 404,
+    "n_jobs": null,
+    "num_leaves": 110,
+    "objective": null,
+    "random_state": 42,
+    "reg_alpha": 1.1036250149900698e-07,
+    "reg_lambda": 0.5860448217200517,
+    "subsample": 0.5370223258670452,
+    "subsample_for_bin": 200000,
+    "subsample_freq": 0,
+    "verbose": -1,
+    "device": "gpu"
+  },
+  "lag_policy": "drop",
+  "features": [
+    "season_phase_cos",
+    "day_in_season",
+    "hour_cos",
+    "Surface_Pressure",
+    "season_phase_sin",
+    "day_of_year_sin",
+    "day_of_year_cos",
+    "dayofyear",
+    "hour"
+  ],
+  "recalc_features": [],
+  "feature_selector": "mi_top_k",
+  "k_features": null,
+  "sfs_settings": null,
+  "rolling_settings": {
+    "keep_rolling_stats": false,
+    "min_rolling_win": 2
+  },
+  "cv_rmse": 158.64861414844216,
+  "cv_mape%": 17.39555205740095,
+  "share_hyperparams": false,
+  "separate_strategy": "independent"
+}
