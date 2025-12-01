@@ -51,7 +51,7 @@ pq-load-forecasting-gbm/
     # Q_Reactive_power_predictions_*.xlsx
     # *_daily_metrics_*.xlsx
 
-  dm_results/
+  results/
     # Outputs from DM analysis:
     # DM_across_models_P.xlsx
     # DM_across_models_Q.xlsx
