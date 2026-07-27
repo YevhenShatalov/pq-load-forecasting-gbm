@@ -4,7 +4,7 @@ This folder contains the main pipeline for:
 
 1. **Data preparation & feature engineering** → `data_prep_and_features.py`  
 2. **Model training & hyperparameter tuning** → `train_models.py`  
-3. **Walk-forward evaluation & probabilistic scoring** → `evaluate_models_walkforward.py`  
+3. **Walk-forward evaluation & probabilistic scoring** → `evaluate_models.py`  
 4. **Diebold–Mariano comparisons across models** → `dm_across_models.py`
 
 ---
@@ -213,7 +213,7 @@ Example usage in `__main__`:
 
 ---
 
-## 3. `evaluate_models_walkforward.py`
+## 3. `evaluate_models.py`
 
 This module takes the **tuned models** (`*_best.meta.json` + native files) and the processed `PQ.xlsx` and produces **out-of-sample evaluation workbooks** with:
 
