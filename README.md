@@ -26,7 +26,7 @@ pq-load-forecasting-gbm/
   src/
     data_prep_and_features.py       # Data loading, cleaning, feature engineering, lag building
     train_models.py                 # Train/tune GBM models for P and Q
-    evaluate_models_walkforward.py  # Walk-forward forecasting + probabilistic metrics
+    evaluate_models.py  # Walk-forward forecasting + probabilistic metrics
     dm_across_models.py             # DM tests and comparison plots across models
 
   data/
