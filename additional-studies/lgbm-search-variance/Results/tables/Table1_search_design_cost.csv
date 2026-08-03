@@ -1,0 +1,6 @@
+configuration,tuning_origins,terminal_trials,sampler_seeds_represented,actual_target_fold_fits,search_role,cumulative_trial_time_seconds
+S24-T10,24,10,42 (one nested trajectory),480,Nested best-so-far milestone,558.9375699999999
+S24-T30,24,30,42 (one nested trajectory),1296,Nested best-so-far milestone,1697.240851
+S24-T60,24,60,42 operational; 17 and 73 development rescoring,2598,Depth and breadth reference,4507.863644999999
+S36-T60,36,60,42 operational; 17 and 73 development rescoring,3480,Frozen seed-42 breadth configuration,4659.253694
+S48-T60,48,60,42 operational; 17 and 73 development rescoring,4056,Frozen seed-42 breadth configuration,8139.190663

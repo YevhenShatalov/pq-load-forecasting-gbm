@@ -1,0 +1,28 @@
+{
+  "P_RMSE": 192.00558336970016,
+  "Q_RMSE": 229.7979977161049,
+  "benchmark": "SNaive-24",
+  "definition": "Aggregate hourly RMSE of the previous-day seasonal-naive forecast over all 24 SEARCH-24 origins (576 hours per target).",
+  "folds": 24,
+  "hours_per_target": 576,
+  "input_hashes": {
+    "PQ.xlsx": "aa08d38d241f30b158341fcd3da5e00b71b749406171954d9fa55e51129dc2b9",
+    "historical_source_mut_l24_P.meta.json": "6a50a90d1cdadebb4a77110179eeaab9413494d02e35d91920c9f3683f6f5d5d",
+    "historical_source_mut_l24_Q.meta.json": "95faaba595e8f5e3cc510a6c52084f14292ce3dec393f1c8421607a816637ba9",
+    "splits_event16.xlsx": "d62ec3e6d9cafbc0c2598c3ae5e3e9caf48731ea8153423dfec4639d883901b1",
+    "splits_gap48.xlsx": "84c76496b95f5bf3b8b7164a1f7c1e54245fcdaeeb8951e4be9cbd7526c4149e",
+    "splits_historical.xlsx": "a95539d6a46afcc68b5fcafa01b0c53822565633eb74a0c5d83e379c134ec493",
+    "splits_search24.xlsx": "0de749c8c2811b9c7b76d95e326a32e1ccc3b13cc8defce8a2fad3f54a5c3a46",
+    "splits_search36.xlsx": "64b1d0450972f752310663b771aeeb6856adfd5b0defed48dccd588ffeb0f48c",
+    "splits_search48.xlsx": "4ac448e0ab7ccc331bd113c63eb2210b4b3323e59b65b26d65a68d66b53dbf65"
+  },
+  "script_version": "search-experiment-1.1",
+  "target_scales": {
+    "P_Power": 192.00558336970016,
+    "Q_Power": 229.7979977161049
+  },
+  "units": {
+    "P_Power": "kW",
+    "Q_Power": "kVAr"
+  }
+}

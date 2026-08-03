@@ -1,0 +1,6 @@
+_work/
+_archive/
+Checkpoints/
+Logs/
+__pycache__/
+*.pyc
