@@ -1,0 +1,118 @@
+{
+  "purpose": "Trace every preserved implementation file to the source used by the completed experiment.",
+  "original_files_unchanged": true,
+  "files": [
+    {
+      "copy": "data_prep_and_features.py",
+      "source": "Prepared code/1. data_prep_and_features.py",
+      "source_sha256": "72a097e00fbaaef247fc3bfa04469d39e0069173e9c6676b6c42fcf3e8a5b145",
+      "copy_sha256": "72a097e00fbaaef247fc3bfa04469d39e0069173e9c6676b6c42fcf3e8a5b145",
+      "status": "exact copy"
+    },
+    {
+      "copy": "build_nested_search_splits.py",
+      "source": "LGBM_variance/code/build_nested_search_splits.py",
+      "source_sha256": "f59161d934445bb59648ccc05dc7d39b4c44341487fe3c849a1da7660b8f8922",
+      "copy_sha256": "46434623a140bef15cd8a5a705d3be244cfaa17db907afffc1c384c031320e89",
+      "status": "same split construction with a portable openpyxl export backend and compact Results/reproducibility output; original artifact-tool backend retained"
+    },
+    {
+      "copy": "build_nested_search_workbooks.mjs",
+      "source": "LGBM_variance/code/build_nested_search_workbooks.mjs",
+      "source_sha256": "2deae2d4ea4ad67425f66a8812b8103857d334051c9ade20d62402fc2484a40a",
+      "copy_sha256": "2deae2d4ea4ad67425f66a8812b8103857d334051c9ade20d62402fc2484a40a",
+      "status": "exact copy"
+    },
+    {
+      "copy": "audit_search_inputs.py",
+      "source": "LGBM_variance/code/audit_search_inputs.py",
+      "source_sha256": "bd565488e2e780038b7dd05e1a428fe5c60b9fd97833ef0d5ce2625eed3ceb5e",
+      "copy_sha256": "a41c7048649d2930efb964ccbc3af4c4a6223e4580396a59b101d2ae33ae226e",
+      "status": "scientific audit unchanged; internal-module path detection and compact Results/reproducibility output added"
+    },
+    {
+      "copy": "Forecasting_search.py",
+      "source": "LGBM_variance/code/Forecasting_search.py",
+      "source_sha256": "c018614dc6a3470d293f6997f276578136bdb14de5fac1d4d7b5d93b9abd34eb",
+      "copy_sha256": "93e219c2c2818180036389b1a947f8eadbe7543b8f3b21f7e3f48b007c19b62b",
+      "status": "scientific training logic unchanged; publication model-name resolution and isolated _work output added"
+    },
+    {
+      "copy": "evaluate_search.py",
+      "source": "LGBM_variance/code/evaluate_search.py",
+      "source_sha256": "3fb883aad07bec27f35936e3977774efb9f8fbe16d4e3a96dc4a55df34f1dd3e",
+      "copy_sha256": "d4f2d1e2486aa65be88210bc60a01c0566240098fa3792738140140c292befdf",
+      "status": "scientific evaluation unchanged; publication model-name resolution and isolated _work output added"
+    },
+    {
+      "copy": "proper_model_comparison.py",
+      "source": "proper_model_comparison.py",
+      "source_sha256": "2375ad72d6a36d5d6732c629571500b61ded4aea098d7ae2e2163d50d01b6394",
+      "copy_sha256": "2375ad72d6a36d5d6732c629571500b61ded4aea098d7ae2e2163d50d01b6394",
+      "status": "exact copy"
+    },
+    {
+      "copy": "pq_model_compare.py",
+      "source": "pq_model_compare.py",
+      "source_sha256": "994e4aaf4a0a106d9f4b3f5afb48c659bd28b77dcdfb34f9851290d1f3b8a27d",
+      "copy_sha256": "994e4aaf4a0a106d9f4b3f5afb48c659bd28b77dcdfb34f9851290d1f3b8a27d",
+      "status": "exact copy; imported by proper_model_comparison.py"
+    },
+    {
+      "copy": "probabilistic_analysis.py",
+      "source": "LGBM_variance/code/probabilistic_analysis.py",
+      "source_sha256": "0d188a1bcd7acdfe28155b4caa16ff3eaa8b9e9496de3729abf59b4ad24d6787",
+      "copy_sha256": "23905f78a03d263c8432798fa9eb3123560b585f319f81a05385fe6a1a52a96b",
+      "status": "scientific calculations unchanged; isolated _work input and output paths added"
+    },
+    {
+      "copy": "analyze_search.py",
+      "source": "LGBM_variance/code/analyze_search.py",
+      "source_sha256": "958cebcbd98f0973e762de0a006e9743c54cc3ff4735e6f988544b6a42662383",
+      "copy_sha256": "83311991eee1617843d6ecb468770a45b023f41faf1d131ac4ef964292a0ee52",
+      "status": "scientific analysis unchanged; publication model-name resolution and isolated _work paths added"
+    },
+    {
+      "copy": "analyze_t60_breadth.py",
+      "source": "LGBM_variance/code/analyze_t60_breadth.py",
+      "source_sha256": "c5bddb2a6e6e88645c631ddd79fdea4c1f945ac0a624236416e96a50ea4199dc",
+      "copy_sha256": "7a5ac60e436225cba9ee79c4b4ad542a797ef362b1684e499a873a8cc5b6af50",
+      "status": "scientific analysis unchanged; publication model-name resolution and isolated _work paths added"
+    },
+    {
+      "copy": "audit_59day_forecasts.py",
+      "source": "LGBM_variance/code/audit_59day_forecasts.py",
+      "source_sha256": "6e65cd2239f416b1eae51a63c6c23a48edbc36dcebf3163a95646162a52fcb57",
+      "copy_sha256": "2383fb64105600eaf65e2de5490ae4cbb611f27a51fd90c211a5351939012748",
+      "status": "scientific audit unchanged; internal-module path detection, _work inputs, and compact Results/reproducibility output added"
+    },
+    {
+      "copy": "build_conference_evidence.py",
+      "source": "LGBM_variance/code/build_conference_evidence.py",
+      "source_sha256": "dd57086acdf7466675964aeb265c69a19ca5c6d37cb17c4ba1ae50c236448cc2",
+      "copy_sha256": "57fbb8ceab744490de19ba332c4b4aeeaa2c17217a5a37815d315aa45c958a93",
+      "status": "scientific calculations unchanged; _work inputs, compact Results output, portable manifest, and complete reader-facing figures added"
+    },
+    {
+      "copy": "dm_across_models.py",
+      "source": "Prepared code/4. dm_across_models.py",
+      "source_sha256": "36983586785c7160ebe2f4a551001e4f3b77a46d54c4102a682300531d991c4e",
+      "copy_sha256": "36983586785c7160ebe2f4a551001e4f3b77a46d54c4102a682300531d991c4e",
+      "status": "exact copy"
+    },
+    {
+      "copy": "build_full_results.mjs",
+      "source": "LGBM_variance/conference_final/_build/build_full_results.mjs",
+      "source_sha256": "927b11837cfa508c444a40708b45f46038188c27105b5dfb9810b545ab925d47",
+      "copy_sha256": "e745765389755352fd20a519c7d8e2128ac739a5996eeca6afcee9f9c0f27fd4",
+      "status": "workbook content unchanged; explicit output-root argument added"
+    },
+    {
+      "copy": "model_registry.py",
+      "source": "structured publication interface",
+      "source_sha256": null,
+      "copy_sha256": "2138b631d90400f143873ef28d1a322a1b570394b73466ee2345fcbc4a314a64",
+      "status": "new filename-resolution interface; no fitting, forecasting, metric, or statistical calculations"
+    }
+  ]
+}

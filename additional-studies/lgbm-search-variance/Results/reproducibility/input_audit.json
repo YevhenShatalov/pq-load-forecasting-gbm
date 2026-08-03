@@ -1,0 +1,393 @@
+{
+  "EVENT-16": {
+    "disjoint_from_search_designs": [
+      "SEARCH-24",
+      "SEARCH-36",
+      "SEARCH-48"
+    ],
+    "includes_2022_01_01": true,
+    "optuna_use": false,
+    "origins_in_order": [
+      "2021-10-13",
+      "2021-10-14",
+      "2021-10-15",
+      "2021-12-01",
+      "2021-12-24",
+      "2021-12-25",
+      "2021-12-26",
+      "2021-12-27",
+      "2021-12-31",
+      "2022-01-01",
+      "2022-01-02",
+      "2022-01-03",
+      "2022-01-06",
+      "2022-01-07",
+      "2022-01-08",
+      "2022-01-14"
+    ],
+    "rows": 16,
+    "unique_origins": 16
+  },
+  "GAP-48": {
+    "first_16_all_strata_represented": true,
+    "first_16_gap_counts": {
+      "0": 4,
+      "168": 4,
+      "24": 4,
+      "72": 4
+    },
+    "gap_counts": {
+      "0": 12,
+      "168": 12,
+      "24": 12,
+      "72": 12
+    },
+    "gap_stratum_cell_size": 4,
+    "origins_in_first_occurrence_order": [
+      "2021-02-23",
+      "2021-03-01",
+      "2021-02-16",
+      "2021-04-06",
+      "2021-05-02",
+      "2021-05-14",
+      "2021-06-11",
+      "2021-08-23",
+      "2021-07-17",
+      "2021-09-03",
+      "2021-08-24",
+      "2021-09-27"
+    ],
+    "rows": 48,
+    "stratum_counts": {
+      "calendar": 16,
+      "regular": 16,
+      "stress": 16
+    },
+    "unique_origins": 12
+  },
+  "SEARCH-24": {
+    "first_12_strata": {
+      "calendar": 4,
+      "regular": 4,
+      "stress": 4
+    },
+    "fit_gap_hours": {
+      "0": 24
+    },
+    "origins_in_pruning_order": [
+      "2021-02-23",
+      "2021-03-01",
+      "2021-07-17",
+      "2021-07-27",
+      "2021-08-24",
+      "2021-02-16",
+      "2021-04-06",
+      "2021-05-02",
+      "2021-05-14",
+      "2021-09-03",
+      "2021-08-23",
+      "2021-09-27",
+      "2021-02-03",
+      "2021-05-01",
+      "2021-07-15",
+      "2021-03-19",
+      "2021-05-03",
+      "2021-07-16",
+      "2021-03-27",
+      "2021-08-05",
+      "2021-05-18",
+      "2021-08-08",
+      "2021-06-11",
+      "2021-09-19"
+    ],
+    "pruning_order": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24
+    ],
+    "rows": 24,
+    "strata": {
+      "calendar": 6,
+      "regular": 12,
+      "stress": 6
+    },
+    "unique_origins": 24
+  },
+  "SEARCH-36": {
+    "additions_in_pruning_order": [
+      "2021-02-24",
+      "2021-03-08",
+      "2021-03-12",
+      "2021-04-19",
+      "2021-06-21",
+      "2021-08-04",
+      "2021-06-17",
+      "2021-06-28",
+      "2021-09-30",
+      "2021-04-22",
+      "2021-06-30",
+      "2021-09-07"
+    ],
+    "ignored_nested_identity_columns": [
+      "design_set",
+      "origin_layer",
+      "pruning_order"
+    ],
+    "inherited_identity_columns": [
+      "train_start",
+      "train_end",
+      "test_start",
+      "test_end",
+      "origin_id",
+      "scheme",
+      "stratum",
+      "cluster_id",
+      "event_label",
+      "fit_gap_hours",
+      "history_policy",
+      "optuna_use"
+    ],
+    "inherited_rows": 24,
+    "origin_layers": {
+      "CORE24": 24,
+      "EXPANSION_A": 12
+    },
+    "parent_design": "SEARCH-24",
+    "pruning_order": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36
+    ],
+    "rows": 36,
+    "strata": {
+      "calendar": 9,
+      "regular": 18,
+      "stress": 9
+    },
+    "unique_origins": 36
+  },
+  "SEARCH-48": {
+    "additions_in_pruning_order": [
+      "2021-02-22",
+      "2021-03-09",
+      "2021-05-13",
+      "2021-04-10",
+      "2021-06-01",
+      "2021-07-09",
+      "2021-05-21",
+      "2021-09-01",
+      "2021-08-09",
+      "2021-04-21",
+      "2021-07-05",
+      "2021-08-19"
+    ],
+    "ignored_nested_identity_columns": [
+      "design_set",
+      "origin_layer",
+      "pruning_order"
+    ],
+    "inherited_identity_columns": [
+      "train_start",
+      "train_end",
+      "test_start",
+      "test_end",
+      "origin_id",
+      "scheme",
+      "stratum",
+      "cluster_id",
+      "event_label",
+      "fit_gap_hours",
+      "history_policy",
+      "optuna_use"
+    ],
+    "inherited_rows": 36,
+    "origin_layers": {
+      "CORE24": 24,
+      "EXPANSION_A": 12,
+      "EXPANSION_B": 12
+    },
+    "parent_design": "SEARCH-36",
+    "pruning_order": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23,
+      24,
+      25,
+      26,
+      27,
+      28,
+      29,
+      30,
+      31,
+      32,
+      33,
+      34,
+      35,
+      36,
+      37,
+      38,
+      39,
+      40,
+      41,
+      42,
+      43,
+      44,
+      45,
+      46,
+      47,
+      48
+    ],
+    "rows": 48,
+    "strata": {
+      "calendar": 12,
+      "regular": 24,
+      "stress": 12
+    },
+    "unique_origins": 48
+  },
+  "code_files": {
+    "Forecasting_search.py": "c018614dc6a3470d293f6997f276578136bdb14de5fac1d4d7b5d93b9abd34eb",
+    "analyze_search.py": "958cebcbd98f0973e762de0a006e9743c54cc3ff4735e6f988544b6a42662383",
+    "audit_search_inputs.py": "bd565488e2e780038b7dd05e1a428fe5c60b9fd97833ef0d5ce2625eed3ceb5e",
+    "build_nested_search_splits.py": "f59161d934445bb59648ccc05dc7d39b4c44341487fe3c849a1da7660b8f8922",
+    "build_nested_search_workbooks.mjs": "2deae2d4ea4ad67425f66a8812b8103857d334051c9ade20d62402fc2484a40a",
+    "evaluate_search.py": "3fb883aad07bec27f35936e3977774efb9f8fbe16d4e3a96dc4a55df34f1dd3e"
+  },
+  "created_utc": "2026-07-31T19:19:44.123539+00:00",
+  "derived_files": {
+    "historical_anchor": {
+      "path": "F:\\assпірантура\\моя тема\\Code\\1\\LGBM_variance\\Input\\historical_mut_l24_params.json",
+      "sha256": "f125a1e9c61fddf48ce8d399e4e2c268f550d6499990b74c7933c3049100ac62"
+    },
+    "nested_split_audit": {
+      "path": "F:\\assпірантура\\моя тема\\Code\\1\\LGBM_variance\\manifests\\nested_split_audit.json",
+      "sha256": "f8d11e1ddab5771dafbfcdd09cdd8d9783d2eb83467a7e3bb69589d9b5fbd3e1"
+    },
+    "objective_scales": {
+      "path": "F:\\assпірантура\\моя тема\\Code\\1\\LGBM_variance\\Input\\objective_scales.json",
+      "sha256": "95c0b811d9fc85e2ef8b4c432afb964c7907d2a0dd913cffb4ac0daeec1a6397"
+    }
+  },
+  "diagnostic_snaive24_rmse": {
+    "SEARCH-36": {
+      "P_Power": 177.62155305905617,
+      "Q_Power": 211.26985809166553
+    },
+    "SEARCH-48": {
+      "P_Power": 179.90593121479677,
+      "Q_Power": 216.35292840064636
+    },
+    "objective_scales_remain_frozen_from": "SEARCH-24",
+    "used_for_objective_scaling": false
+  },
+  "files": {
+    "PQ.xlsx": "aa08d38d241f30b158341fcd3da5e00b71b749406171954d9fa55e51129dc2b9",
+    "historical_source_mut_l24_P.meta.json": "6a50a90d1cdadebb4a77110179eeaab9413494d02e35d91920c9f3683f6f5d5d",
+    "historical_source_mut_l24_Q.meta.json": "95faaba595e8f5e3cc510a6c52084f14292ce3dec393f1c8421607a816637ba9",
+    "splits_event16.xlsx": "d62ec3e6d9cafbc0c2598c3ae5e3e9caf48731ea8153423dfec4639d883901b1",
+    "splits_gap48.xlsx": "84c76496b95f5bf3b8b7164a1f7c1e54245fcdaeeb8951e4be9cbd7526c4149e",
+    "splits_historical.xlsx": "a95539d6a46afcc68b5fcafa01b0c53822565633eb74a0c5d83e379c134ec493",
+    "splits_search24.xlsx": "0de749c8c2811b9c7b76d95e326a32e1ccc3b13cc8defce8a2fad3f54a5c3a46",
+    "splits_search36.xlsx": "64b1d0450972f752310663b771aeeb6856adfd5b0defed48dccd588ffeb0f48c",
+    "splits_search48.xlsx": "4ac448e0ab7ccc331bd113c63eb2210b4b3323e59b65b26d65a68d66b53dbf65"
+  },
+  "pq": {
+    "columns": 52,
+    "dynamic_features_present": [
+      "P_Power_lag_1",
+      "P_Power_lag_24",
+      "P_Power_rmean_24",
+      "P_Power_rstd_24",
+      "P_Power_rmean_168",
+      "P_Power_rstd_168",
+      "Q_Power_lag_1",
+      "Q_Power_lag_24",
+      "Q_Power_rmean_24",
+      "Q_Power_rstd_24",
+      "Q_Power_rmean_168",
+      "Q_Power_rstd_168"
+    ],
+    "first_timestamp": "2021-01-02T00:00:00",
+    "hourly_grid": true,
+    "last_timestamp": "2022-06-30T23:00:00",
+    "rows": 13080,
+    "targets_complete": true,
+    "unique_timestamps": true
+  },
+  "script_version": "search-experiment-1.1",
+  "status": "passed"
+}

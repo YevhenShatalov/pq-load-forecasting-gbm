@@ -1,0 +1,62 @@
+{
+  "benchmark_folds": 6,
+  "cpu_gpu_relative_objective_difference": null,
+  "environment": {
+    "cpu_count": 32,
+    "hostname": "LegionPro5",
+    "platform": "Windows-11-10.0.22631-SP0",
+    "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+    "timestamp_utc": "2026-07-30T06:57:19.535709+00:00",
+    "versions": {
+      "lightgbm": "4.6.0",
+      "numpy": "2.2.6",
+      "optuna": "4.5.0",
+      "pandas": "2.3.2"
+    }
+  },
+  "gpu_speedup_over_cpu": 0.0,
+  "results": {
+    "cpu": {
+      "P_RMSE": 118.52126329866738,
+      "Q_RMSE": 94.40817507875715,
+      "available": true,
+      "duration_seconds": 9.658436099998653,
+      "elapsed_seconds": 9.675164400134236,
+      "fit_count": 12,
+      "normalized_objective": 0.5140557216173738,
+      "params_by_target": {
+        "P_Power": {
+          "colsample_bytree": 0.5290418060840998,
+          "learning_rate": 0.1540359659501924,
+          "max_depth": 9,
+          "min_child_samples": 51,
+          "n_estimators": 850,
+          "num_leaves": 118,
+          "reg_alpha": 0.6245760287469893,
+          "reg_lambda": 0.002570603566117598,
+          "subsample": 0.5779972601681014
+        },
+        "Q_Power": {
+          "colsample_bytree": 0.5290418060840998,
+          "learning_rate": 0.1540359659501924,
+          "max_depth": 9,
+          "min_child_samples": 51,
+          "n_estimators": 850,
+          "num_leaves": 118,
+          "reg_alpha": 0.6245760287469893,
+          "reg_lambda": 0.002570603566117598,
+          "subsample": 0.5779972601681014
+        }
+      },
+      "raw_objective": 106.46471918871228
+    },
+    "gpu": {
+      "available": false,
+      "reason": "LightGBM GPU preflight failed"
+    }
+  },
+  "script_version": "search-experiment-1.0",
+  "selected_device": "cpu",
+  "selection_rule": "Select GPU only when it is at least 10% faster and the paired normalized objective differs from CPU by no more than 2%.",
+  "threads": 4
+}

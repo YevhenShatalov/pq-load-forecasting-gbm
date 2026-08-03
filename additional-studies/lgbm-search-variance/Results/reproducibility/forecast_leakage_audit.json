@@ -1,0 +1,28 @@
+{
+  "status": "PASS",
+  "created_at": "2026-08-01T06:32:03.744558+00:00",
+  "configurations": 5,
+  "origins_per_configuration": 59,
+  "hours_per_target": 1416,
+  "fit_end_rule_verified": true,
+  "history_end_rule_verified": true,
+  "future_target_rows_in_fit_set": 0,
+  "actual_values_identical_across_configurations": true,
+  "maximum_actual_difference": 0.0,
+  "future_target_perturbation_verified": true,
+  "target_order_invariance_verified": true,
+  "maximum_perturbation_difference": 0.0,
+  "maximum_order_difference": 0.0,
+  "behavioral_configurations": [
+    "S24-T60",
+    "S36-T60",
+    "S48-T60"
+  ],
+  "behavioral_origins": [
+    "2022-01-01T00:00:00",
+    "2022-02-01T00:00:00",
+    "2022-02-24T00:00:00"
+  ],
+  "tolerance": 1e-10,
+  "new_hyperparameter_tuning_performed": false
+}

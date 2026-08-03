@@ -1,0 +1,186 @@
+{
+  "creation_timestamp": "2026-08-01T13:29:13.387422+00:00",
+  "package_root": "..",
+  "package_root_note": "All artifact paths are relative to the Results directory.",
+  "new_hyperparameter_tuning_performed": false,
+  "leakage_audit": {
+    "status": "PASS",
+    "created_at": "2026-08-01T06:32:03.744558+00:00",
+    "configurations": 5,
+    "origins_per_configuration": 59,
+    "hours_per_target": 1416,
+    "fit_end_rule_verified": true,
+    "history_end_rule_verified": true,
+    "future_target_rows_in_fit_set": 0,
+    "actual_values_identical_across_configurations": true,
+    "maximum_actual_difference": 0.0,
+    "future_target_perturbation_verified": true,
+    "target_order_invariance_verified": true,
+    "maximum_perturbation_difference": 0.0,
+    "maximum_order_difference": 0.0,
+    "behavioral_configurations": [
+      "S24-T60",
+      "S36-T60",
+      "S48-T60"
+    ],
+    "behavioral_origins": [
+      "2022-01-01T00:00:00",
+      "2022-02-01T00:00:00",
+      "2022-02-24T00:00:00"
+    ],
+    "tolerance": 1e-10,
+    "new_hyperparameter_tuning_performed": false
+  },
+  "fixed_scales": {
+    "P_Power": 192.00558336970016,
+    "Q_Power": 229.7979977161049
+  },
+  "software_versions": {
+    "python": "3.13.7",
+    "pandas": "2.3.2",
+    "numpy": "2.2.6",
+    "matplotlib": "3.10.6"
+  },
+  "artifacts": [
+    {
+      "path": "data/daily_paired_losses.csv",
+      "sha256": "53346f4aa71f21a136375202883aecb7c7f7019d26ad1be6cc5eb910089cbf46",
+      "bytes": 73765
+    },
+    {
+      "path": "data/forecast_59days_long.csv",
+      "sha256": "1d0573bf563756c19f27b53308e128a9585b05f524788f6a8d40ce2bf553995a",
+      "bytes": 3494154
+    },
+    {
+      "path": "data/forecast_59days_wide.csv",
+      "sha256": "c91965713bc37e739b447c8596714bb56931d6ba78e0298989cf0fafdcfb82f7",
+      "bytes": 384598
+    },
+    {
+      "path": "data/primary_54day_metrics.csv",
+      "sha256": "30d484c549928a9294bfba82acd085be01041838ef91d4d9a5ac201c340d481e",
+      "bytes": 3382
+    },
+    {
+      "path": "data/stress_5day_metrics.csv",
+      "sha256": "1aa2ba16b69bc89fa01d196ab908987fae925d44aa33b365370abe2ba319bdd1",
+      "bytes": 3289
+    },
+    {
+      "path": "figures/01_validation_origins.pdf",
+      "sha256": "9ccf3473bf157664a6c349454d8c9398a36b51808b6746185cf54a8e783a579a",
+      "bytes": 21810
+    },
+    {
+      "path": "figures/01_validation_origins.png",
+      "sha256": "6afa728057980ee2a4f2cdad4258d57bf757da04b9e333c5451b3ac1b897f7f1",
+      "bytes": 109236
+    },
+    {
+      "path": "figures/02_search_depth_and_breadth.pdf",
+      "sha256": "6fdf068f212eed802aa45a8237ba1cf736aabca17da861fe34af24e9d790d5c8",
+      "bytes": 55239
+    },
+    {
+      "path": "figures/02_search_depth_and_breadth.png",
+      "sha256": "827b776b395e9975db845a2f41a11dc6efacc78df208b54108ae33db66f1347e",
+      "bytes": 269142
+    },
+    {
+      "path": "figures/03_forecast_trajectories.pdf",
+      "sha256": "4f0531ec1e85facb1c495c04217b3438e5f471a254e19270f69e7ca39acaa600",
+      "bytes": 225347
+    },
+    {
+      "path": "figures/03_forecast_trajectories.png",
+      "sha256": "18a257889fd5e1643e394a0377c7a7e0b0c51f53e85dda455e2ba460430e568f",
+      "bytes": 2510959
+    },
+    {
+      "path": "figures/04_point_accuracy.pdf",
+      "sha256": "30224979d781587b4dbc5aa7544d8c914ecc5903b74efb844956272bf9ae9495",
+      "bytes": 20855
+    },
+    {
+      "path": "figures/04_point_accuracy.png",
+      "sha256": "53580e5394eaf560fddc8d53ae39a4f88cf49ac7ec7bf472433cd520d5c07bf8",
+      "bytes": 186613
+    },
+    {
+      "path": "figures/05_probabilistic_accuracy.pdf",
+      "sha256": "ac7ee2457e6565449541ab6a7652a619ae186669aaaa3746053136952e03ed9f",
+      "bytes": 18151
+    },
+    {
+      "path": "figures/05_probabilistic_accuracy.png",
+      "sha256": "eb95547f861266990148e4279cf7a70466c26bf2b7eb07c7c8f4a0eabf133e74",
+      "bytes": 171062
+    },
+    {
+      "path": "figures/06_paired_comparisons.pdf",
+      "sha256": "e03ee553e17039c44bff03ccba0d93b419cd624399d53fa87f9b81f9989e5aa7",
+      "bytes": 53319
+    },
+    {
+      "path": "figures/06_paired_comparisons.png",
+      "sha256": "9c1e3fc4bb5502f48da0ca63a7b6e4bbb20381694606998777a690425972b3f0",
+      "bytes": 180130
+    },
+    {
+      "path": "reproducibility/finalization_report.md",
+      "sha256": "0760576d8c621c626dcf706f4cb106376d8acd4234bff7721403615842288e2d",
+      "bytes": 1341
+    },
+    {
+      "path": "reproducibility/forecast_leakage_audit.json",
+      "sha256": "8e1eb63e5ae57b419a550fb28455c925970b5407fc560c9e73462a71a0b9aba1",
+      "bytes": 821
+    },
+    {
+      "path": "reproducibility/input_audit.json",
+      "sha256": "459fd2374cfc57bee4deda6fcd63151dc831929218bb4a537dda5cf179d630cb",
+      "bytes": 8822
+    },
+    {
+      "path": "reproducibility/nested_split_audit.json",
+      "sha256": "f8d11e1ddab5771dafbfcdd09cdd8d9783d2eb83467a7e3bb69589d9b5fbd3e1",
+      "bytes": 3781
+    },
+    {
+      "path": "reproducibility/source_discrepancies.csv",
+      "sha256": "ca0c8c963152617b57933d73b5df41d32de285e44bcea09de7c55ff43fcf0eb4",
+      "bytes": 52
+    },
+    {
+      "path": "reproducibility/source_inventory.csv",
+      "sha256": "8f86d86631d913f8bc13985658a91dbd05ab2a5b2f977a805d146e7414ef2039",
+      "bytes": 6009
+    },
+    {
+      "path": "tables/breadth_three_seed_summary.csv",
+      "sha256": "0f0641cc2f26ff71501af73352c28c636333d5eb677d0ca2a3860779eeb39092",
+      "bytes": 1504
+    },
+    {
+      "path": "tables/full_results.xlsx",
+      "sha256": "5c1726cfe3b19691e0bee532f2e03ba092e0036ff8dd419d23cf697f78b4f343",
+      "bytes": 1589251
+    },
+    {
+      "path": "tables/Table1_search_design_cost.csv",
+      "sha256": "bebf8e0aa5a30068aacdb3f1df1ea2a4015f1284a63ba0f335e20ddbed4e1c20",
+      "bytes": 667
+    },
+    {
+      "path": "tables/Table2_primary_performance.csv",
+      "sha256": "6ddaa17cf6dcc5db679add389b98a08c7a005849a6caca5984524c92b17179d1",
+      "bytes": 948
+    },
+    {
+      "path": "tables/Table3_paired_tests.csv",
+      "sha256": "a6d3fd4914193a7ad2c0b1f509915152a01081a21f5a9237b0c87eaeb5263214",
+      "bytes": 2606
+    }
+  ]
+}

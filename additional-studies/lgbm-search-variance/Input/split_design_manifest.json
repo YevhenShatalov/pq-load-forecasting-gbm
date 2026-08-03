@@ -1,0 +1,714 @@
+{
+  "manifest_version": 1,
+  "created_utc": "2026-07-29T18:16:43.690Z",
+  "source": {
+    "pq_workbook": "Input/PQ.xlsx",
+    "pq_sheet": "24",
+    "pq_sha256": "AA08D38D241F30B158341FCD3DA5E00B71B749406171954D9FA55E51129DC2B9",
+    "l24_first_timestamp": "2021-01-02 00:00:00",
+    "l24_last_timestamp": "2022-06-30 23:00:00",
+    "l24_rows": 13080,
+    "historical_split_workbook": "Input/splits.xlsx",
+    "historical_split_sha256": "A95539D6A46AFCC68B5FCAFA01B0C53822565633EB74A0C5D83E379C134EC493"
+  },
+  "shared_protocol": {
+    "worksheet_name": "24",
+    "train_start": "2021-01-02 00:00:00",
+    "test_duration_hours": 24,
+    "history_policy": "through_test_start",
+    "target_history_cutoff": "test_start minus 1 hour",
+    "fitting_cutoff_rule": "train_end = test_start - (fit_gap_hours + 1) hours",
+    "recursion": "Exactly 24 forecast steps for every row; fitting gaps do not remove observed target history."
+  },
+  "designs": {
+    "SEARCH-24": {
+      "file": "splits_search24.xlsx",
+      "sha256": "0DE749C8C2811B9C7B76D95E326A32E1CCC3B13CC8DEFCE8A2FAD3F54A5C3A46",
+      "purpose": "Primary Optuna tuning set.",
+      "rows": 24,
+      "unique_origins": 24,
+      "strata": {
+        "regular": 12,
+        "calendar": 6,
+        "stress": 6
+      },
+      "selection_rule": "Twelve regular origins, six calendar-event origins, and six physical-stress origins from February-September 2021; expanding training and fresh fitting through the preceding hour.",
+      "suggested_trials": 60,
+      "suggested_pruner": {
+        "class": "MedianPruner",
+        "n_startup_trials": 8,
+        "n_warmup_steps": 11,
+        "interval_steps": 3,
+        "n_min_trials": 5
+      },
+      "row_order": [
+        {
+          "record_order": 1,
+          "origin_id": "2021-02-23",
+          "stratum": "regular",
+          "fit_gap_hours": 0,
+          "cluster_id": "regular_2021_02_23"
+        },
+        {
+          "record_order": 2,
+          "origin_id": "2021-03-01",
+          "stratum": "calendar",
+          "fit_gap_hours": 0,
+          "cluster_id": "season_boundary_2021_03"
+        },
+        {
+          "record_order": 3,
+          "origin_id": "2021-07-17",
+          "stratum": "stress",
+          "fit_gap_hours": 0,
+          "cluster_id": "july_heat_2021"
+        },
+        {
+          "record_order": 4,
+          "origin_id": "2021-07-27",
+          "stratum": "regular",
+          "fit_gap_hours": 0,
+          "cluster_id": "regular_2021_07_27"
+        },
+        {
+          "record_order": 5,
+          "origin_id": "2021-08-24",
+          "stratum": "calendar",
+          "fit_gap_hours": 0,
+          "cluster_id": "independence_2021"
+        },
+        {
+          "record_order": 6,
+          "origin_id": "2021-02-16",
+          "stratum": "stress",
+          "fit_gap_hours": 0,
+          "cluster_id": "february_cold_2021"
+        },
+        {
+          "record_order": 7,
+          "origin_id": "2021-04-06",
+          "stratum": "regular",
+          "fit_gap_hours": 0,
+          "cluster_id": "regular_2021_04_06"
+        },
+        {
+          "record_order": 8,
+          "origin_id": "2021-05-02",
+          "stratum": "calendar",
+          "fit_gap_hours": 0,
+          "cluster_id": "may_holidays_2021"
+        },
+        {
+          "record_order": 9,
+          "origin_id": "2021-05-14",
+          "stratum": "stress",
+          "fit_gap_hours": 0,
+          "cluster_id": "may_rain_2021"
+        },
+        {
+          "record_order": 10,
+          "origin_id": "2021-09-03",
+          "stratum": "regular",
+          "fit_gap_hours": 0,
+          "cluster_id": "regular_2021_09_03"
+        },
+        {
+          "record_order": 11,
+          "origin_id": "2021-08-23",
+          "stratum": "calendar",
+          "fit_gap_hours": 0,
+          "cluster_id": "independence_2021"
+        },
+        {
+          "record_order": 12,
+          "origin_id": "2021-09-27",
+          "stratum": "stress",
+          "fit_gap_hours": 0,
+          "cluster_id": "september_q_transition_2021"
+        },
+        {
+          "record_order": 13,
+          "origin_id": "2021-02-03",
+          "stratum": "regular",
+          "fit_gap_hours": 0,
+          "cluster_id": "regular_2021_02_03"
+        },
+        {
+          "record_order": 14,
+          "origin_id": "2021-05-01",
+          "stratum": "calendar",
+          "fit_gap_hours": 0,
+          "cluster_id": "may_holidays_2021"
+        },
+        {
+          "record_order": 15,
+          "origin_id": "2021-07-15",
+          "stratum": "stress",
+          "fit_gap_hours": 0,
+          "cluster_id": "july_heat_2021"
+        },
+        {
+          "record_order": 16,
+          "origin_id": "2021-03-19",
+          "stratum": "regular",
+          "fit_gap_hours": 0,
+          "cluster_id": "regular_2021_03_19"
+        },
+        {
+          "record_order": 17,
+          "origin_id": "2021-05-03",
+          "stratum": "calendar",
+          "fit_gap_hours": 0,
+          "cluster_id": "may_holidays_2021"
+        },
+        {
+          "record_order": 18,
+          "origin_id": "2021-07-16",
+          "stratum": "stress",
+          "fit_gap_hours": 0,
+          "cluster_id": "july_heat_2021"
+        },
+        {
+          "record_order": 19,
+          "origin_id": "2021-03-27",
+          "stratum": "regular",
+          "fit_gap_hours": 0,
+          "cluster_id": "regular_2021_03_27"
+        },
+        {
+          "record_order": 20,
+          "origin_id": "2021-08-05",
+          "stratum": "regular",
+          "fit_gap_hours": 0,
+          "cluster_id": "regular_2021_08_05"
+        },
+        {
+          "record_order": 21,
+          "origin_id": "2021-05-18",
+          "stratum": "regular",
+          "fit_gap_hours": 0,
+          "cluster_id": "regular_2021_05_18"
+        },
+        {
+          "record_order": 22,
+          "origin_id": "2021-08-08",
+          "stratum": "regular",
+          "fit_gap_hours": 0,
+          "cluster_id": "regular_2021_08_08"
+        },
+        {
+          "record_order": 23,
+          "origin_id": "2021-06-11",
+          "stratum": "regular",
+          "fit_gap_hours": 0,
+          "cluster_id": "regular_2021_06_11"
+        },
+        {
+          "record_order": 24,
+          "origin_id": "2021-09-19",
+          "stratum": "regular",
+          "fit_gap_hours": 0,
+          "cluster_id": "regular_2021_09_19"
+        }
+      ]
+    },
+    "GAP-48": {
+      "file": "splits_gap48.xlsx",
+      "sha256": "84C76496B95F5BF3B8B7164A1F7C1E54245FCDAEEB8951E4BE9CBD7526C4149E",
+      "purpose": "Optional fitting-staleness tuning and sensitivity set.",
+      "rows": 48,
+      "unique_origins": 12,
+      "strata": {
+        "regular": 16,
+        "calendar": 16,
+        "stress": 16
+      },
+      "gaps": {
+        "0": 12,
+        "24": 12,
+        "72": 12,
+        "168": 12
+      },
+      "selection_rule": "Four regular, four calendar-event, and four physical-stress origins, each evaluated with fitting gaps of 0, 24, 72, and 168 hours while target history remains current.",
+      "suggested_trials": 30,
+      "suggested_pruner": {
+        "class": "MedianPruner",
+        "n_startup_trials": 5,
+        "n_warmup_steps": 15,
+        "interval_steps": 4,
+        "n_min_trials": 3
+      },
+      "row_order": [
+        {
+          "record_order": 1,
+          "origin_id": "2021-02-23",
+          "stratum": "regular",
+          "fit_gap_hours": 0,
+          "cluster_id": "regular_2021_02_23"
+        },
+        {
+          "record_order": 2,
+          "origin_id": "2021-03-01",
+          "stratum": "calendar",
+          "fit_gap_hours": 24,
+          "cluster_id": "season_boundary_2021_03"
+        },
+        {
+          "record_order": 3,
+          "origin_id": "2021-02-16",
+          "stratum": "stress",
+          "fit_gap_hours": 72,
+          "cluster_id": "february_cold_2021"
+        },
+        {
+          "record_order": 4,
+          "origin_id": "2021-04-06",
+          "stratum": "regular",
+          "fit_gap_hours": 24,
+          "cluster_id": "regular_2021_04_06"
+        },
+        {
+          "record_order": 5,
+          "origin_id": "2021-05-02",
+          "stratum": "calendar",
+          "fit_gap_hours": 72,
+          "cluster_id": "may_holidays_2021"
+        },
+        {
+          "record_order": 6,
+          "origin_id": "2021-05-14",
+          "stratum": "stress",
+          "fit_gap_hours": 168,
+          "cluster_id": "may_rain_2021"
+        },
+        {
+          "record_order": 7,
+          "origin_id": "2021-06-11",
+          "stratum": "regular",
+          "fit_gap_hours": 72,
+          "cluster_id": "regular_2021_06_11"
+        },
+        {
+          "record_order": 8,
+          "origin_id": "2021-08-23",
+          "stratum": "calendar",
+          "fit_gap_hours": 168,
+          "cluster_id": "independence_2021"
+        },
+        {
+          "record_order": 9,
+          "origin_id": "2021-07-17",
+          "stratum": "stress",
+          "fit_gap_hours": 0,
+          "cluster_id": "july_heat_2021"
+        },
+        {
+          "record_order": 10,
+          "origin_id": "2021-09-03",
+          "stratum": "regular",
+          "fit_gap_hours": 168,
+          "cluster_id": "regular_2021_09_03"
+        },
+        {
+          "record_order": 11,
+          "origin_id": "2021-08-24",
+          "stratum": "calendar",
+          "fit_gap_hours": 0,
+          "cluster_id": "independence_2021"
+        },
+        {
+          "record_order": 12,
+          "origin_id": "2021-09-27",
+          "stratum": "stress",
+          "fit_gap_hours": 24,
+          "cluster_id": "september_q_transition_2021"
+        },
+        {
+          "record_order": 13,
+          "origin_id": "2021-05-02",
+          "stratum": "calendar",
+          "fit_gap_hours": 0,
+          "cluster_id": "may_holidays_2021"
+        },
+        {
+          "record_order": 14,
+          "origin_id": "2021-05-14",
+          "stratum": "stress",
+          "fit_gap_hours": 24,
+          "cluster_id": "may_rain_2021"
+        },
+        {
+          "record_order": 15,
+          "origin_id": "2021-09-03",
+          "stratum": "regular",
+          "fit_gap_hours": 72,
+          "cluster_id": "regular_2021_09_03"
+        },
+        {
+          "record_order": 16,
+          "origin_id": "2021-02-23",
+          "stratum": "regular",
+          "fit_gap_hours": 168,
+          "cluster_id": "regular_2021_02_23"
+        },
+        {
+          "record_order": 17,
+          "origin_id": "2021-04-06",
+          "stratum": "regular",
+          "fit_gap_hours": 0,
+          "cluster_id": "regular_2021_04_06"
+        },
+        {
+          "record_order": 18,
+          "origin_id": "2021-06-11",
+          "stratum": "regular",
+          "fit_gap_hours": 24,
+          "cluster_id": "regular_2021_06_11"
+        },
+        {
+          "record_order": 19,
+          "origin_id": "2021-03-01",
+          "stratum": "calendar",
+          "fit_gap_hours": 72,
+          "cluster_id": "season_boundary_2021_03"
+        },
+        {
+          "record_order": 20,
+          "origin_id": "2021-02-16",
+          "stratum": "stress",
+          "fit_gap_hours": 168,
+          "cluster_id": "february_cold_2021"
+        },
+        {
+          "record_order": 21,
+          "origin_id": "2021-06-11",
+          "stratum": "regular",
+          "fit_gap_hours": 0,
+          "cluster_id": "regular_2021_06_11"
+        },
+        {
+          "record_order": 22,
+          "origin_id": "2021-05-02",
+          "stratum": "calendar",
+          "fit_gap_hours": 24,
+          "cluster_id": "may_holidays_2021"
+        },
+        {
+          "record_order": 23,
+          "origin_id": "2021-04-06",
+          "stratum": "regular",
+          "fit_gap_hours": 72,
+          "cluster_id": "regular_2021_04_06"
+        },
+        {
+          "record_order": 24,
+          "origin_id": "2021-07-17",
+          "stratum": "stress",
+          "fit_gap_hours": 168,
+          "cluster_id": "july_heat_2021"
+        },
+        {
+          "record_order": 25,
+          "origin_id": "2021-09-03",
+          "stratum": "regular",
+          "fit_gap_hours": 0,
+          "cluster_id": "regular_2021_09_03"
+        },
+        {
+          "record_order": 26,
+          "origin_id": "2021-08-23",
+          "stratum": "calendar",
+          "fit_gap_hours": 24,
+          "cluster_id": "independence_2021"
+        },
+        {
+          "record_order": 27,
+          "origin_id": "2021-08-24",
+          "stratum": "calendar",
+          "fit_gap_hours": 72,
+          "cluster_id": "independence_2021"
+        },
+        {
+          "record_order": 28,
+          "origin_id": "2021-09-27",
+          "stratum": "stress",
+          "fit_gap_hours": 168,
+          "cluster_id": "september_q_transition_2021"
+        },
+        {
+          "record_order": 29,
+          "origin_id": "2021-03-01",
+          "stratum": "calendar",
+          "fit_gap_hours": 0,
+          "cluster_id": "season_boundary_2021_03"
+        },
+        {
+          "record_order": 30,
+          "origin_id": "2021-02-23",
+          "stratum": "regular",
+          "fit_gap_hours": 24,
+          "cluster_id": "regular_2021_02_23"
+        },
+        {
+          "record_order": 31,
+          "origin_id": "2021-05-14",
+          "stratum": "stress",
+          "fit_gap_hours": 72,
+          "cluster_id": "may_rain_2021"
+        },
+        {
+          "record_order": 32,
+          "origin_id": "2021-05-02",
+          "stratum": "calendar",
+          "fit_gap_hours": 168,
+          "cluster_id": "may_holidays_2021"
+        },
+        {
+          "record_order": 33,
+          "origin_id": "2021-08-23",
+          "stratum": "calendar",
+          "fit_gap_hours": 0,
+          "cluster_id": "independence_2021"
+        },
+        {
+          "record_order": 34,
+          "origin_id": "2021-08-24",
+          "stratum": "calendar",
+          "fit_gap_hours": 24,
+          "cluster_id": "independence_2021"
+        },
+        {
+          "record_order": 35,
+          "origin_id": "2021-07-17",
+          "stratum": "stress",
+          "fit_gap_hours": 72,
+          "cluster_id": "july_heat_2021"
+        },
+        {
+          "record_order": 36,
+          "origin_id": "2021-04-06",
+          "stratum": "regular",
+          "fit_gap_hours": 168,
+          "cluster_id": "regular_2021_04_06"
+        },
+        {
+          "record_order": 37,
+          "origin_id": "2021-02-16",
+          "stratum": "stress",
+          "fit_gap_hours": 0,
+          "cluster_id": "february_cold_2021"
+        },
+        {
+          "record_order": 38,
+          "origin_id": "2021-07-17",
+          "stratum": "stress",
+          "fit_gap_hours": 24,
+          "cluster_id": "july_heat_2021"
+        },
+        {
+          "record_order": 39,
+          "origin_id": "2021-02-23",
+          "stratum": "regular",
+          "fit_gap_hours": 72,
+          "cluster_id": "regular_2021_02_23"
+        },
+        {
+          "record_order": 40,
+          "origin_id": "2021-03-01",
+          "stratum": "calendar",
+          "fit_gap_hours": 168,
+          "cluster_id": "season_boundary_2021_03"
+        },
+        {
+          "record_order": 41,
+          "origin_id": "2021-05-14",
+          "stratum": "stress",
+          "fit_gap_hours": 0,
+          "cluster_id": "may_rain_2021"
+        },
+        {
+          "record_order": 42,
+          "origin_id": "2021-09-03",
+          "stratum": "regular",
+          "fit_gap_hours": 24,
+          "cluster_id": "regular_2021_09_03"
+        },
+        {
+          "record_order": 43,
+          "origin_id": "2021-09-27",
+          "stratum": "stress",
+          "fit_gap_hours": 72,
+          "cluster_id": "september_q_transition_2021"
+        },
+        {
+          "record_order": 44,
+          "origin_id": "2021-08-24",
+          "stratum": "calendar",
+          "fit_gap_hours": 168,
+          "cluster_id": "independence_2021"
+        },
+        {
+          "record_order": 45,
+          "origin_id": "2021-09-27",
+          "stratum": "stress",
+          "fit_gap_hours": 0,
+          "cluster_id": "september_q_transition_2021"
+        },
+        {
+          "record_order": 46,
+          "origin_id": "2021-02-16",
+          "stratum": "stress",
+          "fit_gap_hours": 24,
+          "cluster_id": "february_cold_2021"
+        },
+        {
+          "record_order": 47,
+          "origin_id": "2021-08-23",
+          "stratum": "calendar",
+          "fit_gap_hours": 72,
+          "cluster_id": "independence_2021"
+        },
+        {
+          "record_order": 48,
+          "origin_id": "2021-06-11",
+          "stratum": "regular",
+          "fit_gap_hours": 168,
+          "cluster_id": "regular_2021_06_11"
+        }
+      ]
+    },
+    "EVENT-16": {
+      "file": "splits_event16.xlsx",
+      "sha256": "D62EC3E6D9CAFBC0C2598C3AE5E3E9CAF48731EA8153423DFEC4639D883901B1",
+      "purpose": "Untouched later unusual-event challenge; never an Optuna input.",
+      "rows": 16,
+      "unique_origins": 16,
+      "selection_rule": "Dense October 2021-January 2022 event sequences covering the October holiday, winter boundary, Christmas, New Year, Orthodox Christmas, and Old New Year.",
+      "optuna_use": false,
+      "row_order": [
+        {
+          "record_order": 1,
+          "origin_id": "2021-10-13",
+          "stratum": "event",
+          "fit_gap_hours": 0,
+          "cluster_id": "october_holiday_2021"
+        },
+        {
+          "record_order": 2,
+          "origin_id": "2021-10-14",
+          "stratum": "event",
+          "fit_gap_hours": 0,
+          "cluster_id": "october_holiday_2021"
+        },
+        {
+          "record_order": 3,
+          "origin_id": "2021-10-15",
+          "stratum": "event",
+          "fit_gap_hours": 0,
+          "cluster_id": "october_holiday_2021"
+        },
+        {
+          "record_order": 4,
+          "origin_id": "2021-12-01",
+          "stratum": "event",
+          "fit_gap_hours": 0,
+          "cluster_id": "winter_boundary_2021"
+        },
+        {
+          "record_order": 5,
+          "origin_id": "2021-12-24",
+          "stratum": "event",
+          "fit_gap_hours": 0,
+          "cluster_id": "december_christmas_2021"
+        },
+        {
+          "record_order": 6,
+          "origin_id": "2021-12-25",
+          "stratum": "event",
+          "fit_gap_hours": 0,
+          "cluster_id": "december_christmas_2021"
+        },
+        {
+          "record_order": 7,
+          "origin_id": "2021-12-26",
+          "stratum": "event",
+          "fit_gap_hours": 0,
+          "cluster_id": "december_christmas_2021"
+        },
+        {
+          "record_order": 8,
+          "origin_id": "2021-12-27",
+          "stratum": "event",
+          "fit_gap_hours": 0,
+          "cluster_id": "december_christmas_2021"
+        },
+        {
+          "record_order": 9,
+          "origin_id": "2021-12-31",
+          "stratum": "event",
+          "fit_gap_hours": 0,
+          "cluster_id": "year_transition_2021_2022"
+        },
+        {
+          "record_order": 10,
+          "origin_id": "2022-01-01",
+          "stratum": "event",
+          "fit_gap_hours": 0,
+          "cluster_id": "year_transition_2021_2022"
+        },
+        {
+          "record_order": 11,
+          "origin_id": "2022-01-02",
+          "stratum": "event",
+          "fit_gap_hours": 0,
+          "cluster_id": "year_transition_2021_2022"
+        },
+        {
+          "record_order": 12,
+          "origin_id": "2022-01-03",
+          "stratum": "event",
+          "fit_gap_hours": 0,
+          "cluster_id": "year_transition_2021_2022"
+        },
+        {
+          "record_order": 13,
+          "origin_id": "2022-01-06",
+          "stratum": "event",
+          "fit_gap_hours": 0,
+          "cluster_id": "orthodox_christmas_2022"
+        },
+        {
+          "record_order": 14,
+          "origin_id": "2022-01-07",
+          "stratum": "event",
+          "fit_gap_hours": 0,
+          "cluster_id": "orthodox_christmas_2022"
+        },
+        {
+          "record_order": 15,
+          "origin_id": "2022-01-08",
+          "stratum": "event",
+          "fit_gap_hours": 0,
+          "cluster_id": "orthodox_christmas_2022"
+        },
+        {
+          "record_order": 16,
+          "origin_id": "2022-01-14",
+          "stratum": "event",
+          "fit_gap_hours": 0,
+          "cluster_id": "old_new_year_2022"
+        }
+      ]
+    }
+  },
+  "compatibility": {
+    "scope": "These workbooks intentionally contain only worksheet 24.",
+    "required_runner_settings": {
+      "requested_pq_sheet_index_zero_based": 1,
+      "all_splits": true,
+      "validation_history_policy": "through_test_start"
+    },
+    "current_runner_limitation": "Forecasting_fixed.py currently checks that every PQ worksheet has a matching split worksheet before applying the requested sheet index. That precheck must be moved after sheet selection before these L24-only workbooks can be passed directly to the runner.",
+    "cache_note": "Use a new checkpoint directory for each design. The four temporal boundaries and source row index already distinguish these rows in the current feature-cache signature."
+  }
+}

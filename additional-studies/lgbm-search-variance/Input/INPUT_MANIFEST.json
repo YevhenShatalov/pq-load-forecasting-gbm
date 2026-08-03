@@ -1,0 +1,319 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Publication inventory for the authoritative prepared inputs used by the LightGBM variance experiment.",
+  "original_files_unchanged": true,
+  "naming_policy": "Code-compatible input filenames are retained; plain-language identifiers and descriptions are provided in this manifest.",
+  "record_count": 13,
+  "total_bytes": 13949652,
+  "prepared_data_scope": {
+    "targets": {
+      "P_Power": "kW",
+      "Q_Power": "kVAr"
+    },
+    "frequency": "hourly",
+    "PQ_worksheets": [
+      "1",
+      "24",
+      "168"
+    ],
+    "PQ_first_timestamp": "2021-01-01 02:00:00",
+    "PQ_last_timestamp": "2022-06-30 23:00:00"
+  },
+  "excluded_files": [
+    {
+      "pattern": "Input/*.inspect.ndjson",
+      "reason": "Spreadsheet-inspection sidecars; not scientific inputs and explicitly excluded from the evidence inventory."
+    },
+    {
+      "paths": [
+        "splits_search24.xlsx",
+        "splits_gap48.xlsx",
+        "splits_event16.xlsx"
+      ],
+      "reason": "Root-level convenience copies are byte-identical to the authoritative files retained under Input."
+    }
+  ],
+  "records": [
+    {
+      "input_id": "prepared_hourly_pq",
+      "filename": "PQ.xlsx",
+      "category": "prepared data",
+      "description": "Prepared hourly P-Q targets, target-history features, weather variables, and calendar variables used for training and evaluation.",
+      "code_required": true,
+      "original_path": "LGBM_variance/Input/PQ.xlsx",
+      "publication_path": "Input/PQ.xlsx",
+      "bytes": 13848247,
+      "sha256": "aa08d38d241f30b158341fcd3da5e00b71b749406171954d9fa55e51129dc2b9",
+      "workbook": [
+        {
+          "sheet": "1",
+          "data_rows": 13102,
+          "columns": 51,
+          "first_index_value": "2021-01-01 02:00:00",
+          "last_index_value": "2022-06-30 23:00:00"
+        },
+        {
+          "sheet": "24",
+          "data_rows": 13080,
+          "columns": 53,
+          "first_index_value": "2021-01-02 00:00:00",
+          "last_index_value": "2022-06-30 23:00:00"
+        },
+        {
+          "sheet": "168",
+          "data_rows": 12936,
+          "columns": 55,
+          "first_index_value": "2021-01-08 00:00:00",
+          "last_index_value": "2022-06-30 23:00:00"
+        }
+      ]
+    },
+    {
+      "input_id": "search_origins_24",
+      "filename": "splits_search24.xlsx",
+      "category": "development splits",
+      "description": "Primary chronological development design with 24 forecast origins.",
+      "code_required": true,
+      "original_path": "LGBM_variance/Input/splits_search24.xlsx",
+      "publication_path": "Input/splits_search24.xlsx",
+      "bytes": 7703,
+      "sha256": "0de749c8c2811b9c7b76d95e326a32e1ccc3b13cc8defce8a2fad3f54a5c3a46",
+      "workbook": [
+        {
+          "sheet": "24",
+          "data_rows": 24,
+          "columns": 14,
+          "first_index_value": "2021-01-02 00:00:00",
+          "last_index_value": "2021-01-02 00:00:00",
+          "first_test_start": "2021-02-03 00:00:00",
+          "last_test_start": "2021-09-27 00:00:00",
+          "last_test_end": "2021-09-27 23:00:00",
+          "unique_origins": 24,
+          "fit_gap_hours": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "input_id": "search_origins_36",
+      "filename": "splits_search36.xlsx",
+      "category": "development splits",
+      "description": "Nested chronological development design extending the primary set to 36 origins.",
+      "code_required": true,
+      "original_path": "LGBM_variance/Input/splits_search36.xlsx",
+      "publication_path": "Input/splits_search36.xlsx",
+      "bytes": 9004,
+      "sha256": "64b1d0450972f752310663b771aeeb6856adfd5b0defed48dccd588ffeb0f48c",
+      "workbook": [
+        {
+          "sheet": "24",
+          "data_rows": 36,
+          "columns": 15,
+          "first_index_value": "2021-01-02 00:00:00",
+          "last_index_value": "2021-01-02 00:00:00",
+          "first_test_start": "2021-02-03 00:00:00",
+          "last_test_start": "2021-09-30 00:00:00",
+          "last_test_end": "2021-09-30 23:00:00",
+          "unique_origins": 36,
+          "fit_gap_hours": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "input_id": "search_origins_48",
+      "filename": "splits_search48.xlsx",
+      "category": "development splits",
+      "description": "Nested chronological development design extending the primary set to 48 origins.",
+      "code_required": true,
+      "original_path": "LGBM_variance/Input/splits_search48.xlsx",
+      "publication_path": "Input/splits_search48.xlsx",
+      "bytes": 9988,
+      "sha256": "4ac448e0ab7ccc331bd113c63eb2210b4b3323e59b65b26d65a68d66b53dbf65",
+      "workbook": [
+        {
+          "sheet": "24",
+          "data_rows": 48,
+          "columns": 15,
+          "first_index_value": "2021-01-02 00:00:00",
+          "last_index_value": "2021-01-02 00:00:00",
+          "first_test_start": "2021-02-03 00:00:00",
+          "last_test_start": "2021-09-30 00:00:00",
+          "last_test_end": "2021-09-30 23:00:00",
+          "unique_origins": 48,
+          "fit_gap_hours": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "input_id": "fitting_gap_sensitivity_48",
+      "filename": "splits_gap48.xlsx",
+      "category": "sensitivity splits",
+      "description": "Forty-eight rows covering 12 origins and fitting gaps of 0, 24, 72, and 168 hours.",
+      "code_required": true,
+      "original_path": "LGBM_variance/Input/splits_gap48.xlsx",
+      "publication_path": "Input/splits_gap48.xlsx",
+      "bytes": 9076,
+      "sha256": "84c76496b95f5bf3b8b7164a1f7c1e54245fcdaeeb8951e4be9cbd7526c4149e",
+      "workbook": [
+        {
+          "sheet": "24",
+          "data_rows": 48,
+          "columns": 14,
+          "first_index_value": "2021-01-02 00:00:00",
+          "last_index_value": "2021-01-02 00:00:00",
+          "first_test_start": "2021-02-16 00:00:00",
+          "last_test_start": "2021-09-27 00:00:00",
+          "last_test_end": "2021-09-27 23:00:00",
+          "unique_origins": 12,
+          "fit_gap_hours": [
+            0,
+            24,
+            72,
+            168
+          ]
+        }
+      ]
+    },
+    {
+      "input_id": "event_challenge_16",
+      "filename": "splits_event16.xlsx",
+      "category": "challenge splits",
+      "description": "Sixteen later unusual-event origins reserved from Optuna tuning.",
+      "code_required": true,
+      "original_path": "LGBM_variance/Input/splits_event16.xlsx",
+      "publication_path": "Input/splits_event16.xlsx",
+      "bytes": 6833,
+      "sha256": "d62ec3e6d9cafbc0c2598c3ae5e3e9caf48731ea8153423dfec4639d883901b1",
+      "workbook": [
+        {
+          "sheet": "24",
+          "data_rows": 16,
+          "columns": 14,
+          "first_index_value": "2021-01-02 00:00:00",
+          "last_index_value": "2021-01-02 00:00:00",
+          "first_test_start": "2021-10-13 00:00:00",
+          "last_test_start": "2022-01-14 00:00:00",
+          "last_test_end": "2022-01-14 23:00:00",
+          "unique_origins": 16,
+          "fit_gap_hours": [
+            0
+          ]
+        }
+      ]
+    },
+    {
+      "input_id": "historical_candidate_splits",
+      "filename": "splits_historical.xlsx",
+      "category": "historical provenance",
+      "description": "Original candidate-development split workbook used by the historical MUT-L24 model study.",
+      "code_required": true,
+      "original_path": "LGBM_variance/Input/splits_historical.xlsx",
+      "publication_path": "Input/splits_historical.xlsx",
+      "bytes": 25926,
+      "sha256": "a95539d6a46afcc68b5fcafa01b0c53822565633eb74a0c5d83e379c134ec493",
+      "workbook": [
+        {
+          "sheet": "1",
+          "data_rows": 123,
+          "columns": 9,
+          "first_index_value": 0,
+          "last_index_value": 122,
+          "first_test_start": "2021-02-08 00:00:00",
+          "last_test_start": "2021-12-27 00:00:00",
+          "last_test_end": "2021-12-27 23:00:00"
+        },
+        {
+          "sheet": "24",
+          "data_rows": 123,
+          "columns": 9,
+          "first_index_value": 0,
+          "last_index_value": 122,
+          "first_test_start": "2021-02-09 00:00:00",
+          "last_test_start": "2021-12-28 00:00:00",
+          "last_test_end": "2021-12-28 23:00:00"
+        },
+        {
+          "sheet": "168",
+          "data_rows": 122,
+          "columns": 9,
+          "first_index_value": 0,
+          "last_index_value": 121,
+          "first_test_start": "2021-02-15 00:00:00",
+          "last_test_start": "2021-12-27 00:00:00",
+          "last_test_end": "2021-12-27 23:00:00"
+        }
+      ]
+    },
+    {
+      "input_id": "target_normalization_scales",
+      "filename": "objective_scales.json",
+      "category": "objective definition",
+      "description": "Frozen P and Q RMSE scales from the previous-day seasonal-naive reference on SEARCH-24.",
+      "code_required": true,
+      "original_path": "LGBM_variance/Input/objective_scales.json",
+      "publication_path": "Input/objective_scales.json",
+      "bytes": 1410,
+      "sha256": "95c0b811d9fc85e2ef8b4c432afb964c7907d2a0dd913cffb4ac0daeec1a6397"
+    },
+    {
+      "input_id": "historical_anchor_parameters",
+      "filename": "historical_mut_l24_params.json",
+      "category": "historical anchor",
+      "description": "Verified tunable parameter vector and provenance for the historical MUT-L24 anchor.",
+      "code_required": true,
+      "original_path": "LGBM_variance/Input/historical_mut_l24_params.json",
+      "publication_path": "Input/historical_mut_l24_params.json",
+      "bytes": 3504,
+      "sha256": "f125a1e9c61fddf48ce8d399e4e2c268f550d6499990b74c7933c3049100ac62"
+    },
+    {
+      "input_id": "historical_anchor_source_P",
+      "filename": "historical_source_mut_l24_P.meta.json",
+      "category": "historical anchor",
+      "description": "Source metadata for the historical active-power estimator.",
+      "code_required": true,
+      "original_path": "LGBM_variance/Input/historical_source_mut_l24_P.meta.json",
+      "publication_path": "Input/historical_source_mut_l24_P.meta.json",
+      "bytes": 2442,
+      "sha256": "6a50a90d1cdadebb4a77110179eeaab9413494d02e35d91920c9f3683f6f5d5d"
+    },
+    {
+      "input_id": "historical_anchor_source_Q",
+      "filename": "historical_source_mut_l24_Q.meta.json",
+      "category": "historical anchor",
+      "description": "Source metadata for the historical reactive-power estimator.",
+      "code_required": true,
+      "original_path": "LGBM_variance/Input/historical_source_mut_l24_Q.meta.json",
+      "publication_path": "Input/historical_source_mut_l24_Q.meta.json",
+      "bytes": 2442,
+      "sha256": "95faaba595e8f5e3cc510a6c52084f14292ce3dec393f1c8421607a816637ba9"
+    },
+    {
+      "input_id": "execution_device_selection",
+      "filename": "device_selection.json",
+      "category": "execution configuration",
+      "description": "Recorded CPU/GPU preflight and the resulting CPU selection for the completed searches.",
+      "code_required": true,
+      "original_path": "LGBM_variance/Input/device_selection.json",
+      "publication_path": "Input/device_selection.json",
+      "bytes": 1968,
+      "sha256": "d0f68b7550796632a6f3e90ceb0f0dd6c817b401532c475c0f7036607d1d4a9f"
+    },
+    {
+      "input_id": "split_design_protocol",
+      "filename": "split_design_manifest.json",
+      "category": "protocol documentation",
+      "description": "Machine-readable definition and rationale for SEARCH-24, GAP-48, and EVENT-16.",
+      "code_required": false,
+      "original_path": "LGBM_variance/split_design_manifest.json",
+      "publication_path": "Input/split_design_manifest.json",
+      "bytes": 21109,
+      "sha256": "ce2953e38319cbf6b02d4c7905cf7fb08e8836d64c72d3e21a5945656078b13d"
+    }
+  ]
+}
